@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e293b; /* slate-800 */
+  --color-secondary: #f8fafc; /* slate-50 */
+  --color-brand: #1e3a8a; /* blue-900 */
+  --color-accent: #eab308; /* yellow-500 */
+  --color-accent-soft: rgba(234, 179, 8, 0.1);
+  
+  --font-display: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-secondary text-primary font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-black tracking-tight text-slate-900;
+  }
+}
+
+.yellow-border-l {
+  border-left: 4px solid var(--color-accent);
+}
+
+.glass-card {
+  @apply bg-white border border-slate-200 shadow-sm transition-all duration-300;
+}
